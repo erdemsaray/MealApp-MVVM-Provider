@@ -6,13 +6,9 @@ import '../view/meals_view.dart';
 
 enum CategoryState { idle, busy, error }
 
-
-
 class CategoryViewModel with ChangeNotifier {
   List<CategoryElement> categories = [];
   CategoryState _state = CategoryState.busy;
-  String categoriesValue ='sadasd';
-
 
   CategoryViewModel() {
     _state = CategoryState.idle;
@@ -35,13 +31,11 @@ class CategoryViewModel with ChangeNotifier {
     }
   }
 
-  void clickedCard(BuildContext context, categoryName) {
-    categoriesValue = categoryName;
-    notifyListeners();
-    Navigator.push(
+  void clickedCard(BuildContext context) {
+     Navigator.push(
         context,
         MaterialPageRoute(
-          builder: (context) => const RecipesView(),
+          builder: (context) => RecipesView(),
         ));
   }
 }

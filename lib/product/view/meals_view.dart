@@ -4,8 +4,6 @@ import 'package:provider/provider.dart';
 import '../../core/widgets/custom_card_widget.dart';
 import '../view_model/meals_view_model.dart';
 
-
-
 class RecipesView extends StatelessWidget {
   const RecipesView({super.key});
 
