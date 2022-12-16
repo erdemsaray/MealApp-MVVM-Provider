@@ -32,10 +32,13 @@ class RecipesView extends StatelessWidget {
       );
 
   Widget buildListWidget(BuildContext context) {
-    return SafeArea(
-      child: ListView.builder(
-        itemCount: context.read<MealsViewModel>().mealsList.length,
-        itemBuilder: (context, index) => buildListItem(context, index),
+    return Container(
+      color: Colors.black,
+      child: SafeArea(
+        child: ListView.builder(
+          itemCount: context.read<MealsViewModel>().mealsList.length,
+          itemBuilder: (context, index) => buildListItem(context, index),
+        ),
       ),
     );
   }

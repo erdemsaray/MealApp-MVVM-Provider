@@ -18,7 +18,7 @@ class MealsViewModel with ChangeNotifier {
 
   void changeCategory(String newCategory) {
     categoryName = newCategory;
-    //kategoriyi değiştirdiğimizde fetch meal fonksiyonunu tekrar çağırıyoruz. 
+    //kategoriyi değiştirdiğimizde fetch meal fonksiyonunu tekrar çağırıyoruz.
     fetchMeals();
     notifyListeners();
   }

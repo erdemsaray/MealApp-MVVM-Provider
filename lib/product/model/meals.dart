@@ -29,17 +29,19 @@ class Meal {
     this.strMeal,
     this.strMealThumb,
     this.idMeal,
+    this.strInstructions,
   });
 
   String? strMeal;
   String? strMealThumb;
   String? idMeal;
+  String? strInstructions;
 
   factory Meal.fromJson(Map<String, dynamic> json) => Meal(
-        strMeal: json["strMeal"],
-        strMealThumb: json["strMealThumb"],
-        idMeal: json["idMeal"],
-      );
+      strMeal: json["strMeal"],
+      strMealThumb: json["strMealThumb"],
+      idMeal: json["idMeal"],
+      strInstructions: json['strInstructions']);
 
   Map<String, dynamic> toJson() => {
         "strMeal": strMeal,

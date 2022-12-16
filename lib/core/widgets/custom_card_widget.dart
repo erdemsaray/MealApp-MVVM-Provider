@@ -6,7 +6,7 @@ class CustomCardWidget extends StatelessWidget {
       this.imageLink = 'https://via.placeholder.com/150',
       this.title = 'Title',
       this.pointTextColor = Colors.teal,
-      this.cardBackgroundColor = const Color.fromARGB(51, 255, 255, 255)})
+      this.cardBackgroundColor = const Color.fromARGB(51, 115, 113, 113)})
       : super(key: key);
   final String imageLink;
   final String title;
@@ -33,7 +33,9 @@ class CustomCardWidget extends StatelessWidget {
               padding: const EdgeInsets.only(top: 10),
               child: Container(
                 height: 120,
-                decoration: BoxDecoration(image: DecorationImage(fit: BoxFit.fill, image: NetworkImage(imageLink))),
+                decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(11),
+                    image: DecorationImage(fit: BoxFit.fill, image: NetworkImage(imageLink))),
               ),
             ),
             const SizedBox(

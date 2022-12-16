@@ -33,10 +33,13 @@ class CategoryView extends StatelessWidget {
       );
 
   Widget buildListWidget(BuildContext context) {
-    return SafeArea(
-      child: ListView.builder(
-        itemCount: context.read<CategoryViewModel>().categories.length,
-        itemBuilder: (context, index) => buildListItem(context, index),
+    return Container(
+      color: Colors.black,
+      child: SafeArea(
+        child: ListView.builder(
+          itemCount: context.read<CategoryViewModel>().categories.length,
+          itemBuilder: (context, index) => buildListItem(context, index),
+        ),
       ),
     );
   }
