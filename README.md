@@ -5,10 +5,10 @@ This Flutter app provides different recipes to the user with a remote api. In th
 <h3 align="left">Screenshots</h3>
 <p align="left"> 
 <a> 
-   <img src="screenshots/1.gif" alt="Screenshot1" height="600em"/> 
+   <img src="screenshots/2.gif" alt="Screenshot1" height="600em"/> 
   </a> 
   <a> 
-   <img src="screenshots/2.gif" alt="Screenshot2" height="600em"/> 
+   <img src="screenshots/1.gif" alt="Screenshot2" height="600em"/> 
   </a> 
   <p align="left"> 
 <a> 
