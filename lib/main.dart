@@ -7,7 +7,7 @@ import 'product/view_model/meals_view_model.dart';
 import 'product/view_model/recipe_details_view_model.dart';
 
 void main() => runApp(MultiProvider(providers: [
-      ChangeNotifierProvider(
+      ChangeNotifierProvider<CategoryViewModel>(
         create: (context) => CategoryViewModel(),
       ),
       ChangeNotifierProvider(
@@ -16,8 +16,6 @@ void main() => runApp(MultiProvider(providers: [
       ChangeNotifierProvider(
         create: (context) => RecipeDetailsModel(),
       )
-
-      
     ], child: const MyApp()));
 
 class MyApp extends StatelessWidget {

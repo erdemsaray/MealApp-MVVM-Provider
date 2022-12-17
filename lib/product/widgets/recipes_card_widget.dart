@@ -1,13 +1,14 @@
 import 'package:flutter/material.dart';
 
-class CustomCardWidget extends StatelessWidget {
-  static const Color cardColor = Color.fromARGB(255, 48, 47, 47);
-  const CustomCardWidget(
+import '../constants/project_variables.dart';
+
+class RecipesCardWidget extends StatelessWidget {
+  const RecipesCardWidget(
       {Key? key,
       this.imageLink = 'https://via.placeholder.com/150',
       this.title = 'Title',
       this.pointTextColor = Colors.teal,
-      this.cardBackgroundColor = cardColor})
+      this.cardBackgroundColor = ColorItems.recipesCardBackgroundColor})
       : super(key: key);
   final String imageLink;
   final String title;
@@ -51,7 +52,8 @@ class CustomCardWidget extends StatelessWidget {
                       child: Text(
                           overflow: TextOverflow.ellipsis,
                           title,
-                          style: const TextStyle(fontSize: 20, fontWeight: FontWeight.bold))),
+                          style: const TextStyle(
+                              color: ColorItems.recipesCardTextColor, fontSize: 20, fontWeight: FontWeight.bold))),
                 ),
               ],
             ),

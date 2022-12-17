@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
-import '../../core/widgets/custom_card_widget.dart';
 import '../view_model/category_view_model.dart';
 import '../view_model/meals_view_model.dart';
+import '../widgets/category_card.dart';
 
 class CategoryView extends StatelessWidget {
   const CategoryView({super.key});
@@ -54,7 +54,7 @@ class CategoryView extends StatelessWidget {
           Provider.of<MealsViewModel>(context, listen: false).changeCategory(categoryy);
           Provider.of<CategoryViewModel>(context, listen: false).clickedCard(context);
         },
-        child: CustomCardWidget(
+        child: CategoryCardWidget(
           title: categoryItem.strCategory ?? '',
           imageLink: categoryItem.strCategoryThumb ?? '',
         ),

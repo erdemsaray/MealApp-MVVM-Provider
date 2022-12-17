@@ -20,8 +20,8 @@ class RecipeDetailsModel with ChangeNotifier {
     notifyListeners();
   }
 
-  void changeRecipeID(String id) {
-    recipeID = id;
+  void changeRecipeID(String? id) {
+    recipeID = id ??'';
     getRecipeDetails();
     notifyListeners();
   }

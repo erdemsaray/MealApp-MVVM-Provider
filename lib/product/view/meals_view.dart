@@ -1,11 +1,22 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
-import '../../core/widgets/custom_card_widget.dart';
 import '../view_model/meals_view_model.dart';
+import '../view_model/recipe_details_view_model.dart';
+import '../widgets/recipes_card_widget.dart';
 
-class RecipesView extends StatelessWidget {
+class RecipesView extends StatefulWidget {
   const RecipesView({super.key});
+
+  @override
+  State<RecipesView> createState() => _RecipesViewState();
+}
+
+class _RecipesViewState extends State<RecipesView> {
+  @override
+  void initState() {
+    super.initState();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -46,10 +57,13 @@ class RecipesView extends StatelessWidget {
   Widget buildListItem(BuildContext context, int index) {
     final mealsListItem = context.read<MealsViewModel>().mealsList[index];
     return Padding(
-      padding: const EdgeInsets.all(8.0),
+      padding: const EdgeInsets.all(12.0),
       child: InkWell(
-        onTap: () {},
-        child: CustomCardWidget(
+        onTap: () {
+          Provider.of<RecipeDetailsModel>(context, listen: false).changeRecipeID(mealsListItem.idMeal);
+          Provider.of<MealsViewModel>(context, listen: false).clickedCard(context);
+        },
+        child: RecipesCardWidget(
           title: mealsListItem.strMeal ?? '',
           imageLink: mealsListItem.strMealThumb ?? '',
         ),

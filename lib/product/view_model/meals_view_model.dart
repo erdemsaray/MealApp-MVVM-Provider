@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../model/meals.dart';
 import '../service/meal_service.dart';
+import '../view/recipe_details_view.dart';
 
 enum MealsState { idle, busy, error }
 
@@ -39,5 +40,13 @@ class MealsViewModel with ChangeNotifier {
     } catch (e) {
       state = MealsState.error;
     }
+  }
+
+  void clickedCard(BuildContext context) {
+     Navigator.push(
+        context,
+        MaterialPageRoute(
+          builder: (context) => const RecipeDetailsView(),
+        ));
   }
 }
